@@ -1,0 +1,56 @@
+{
+    "sourcepath": "D:/PSB_IDEAL6",
+    "wildfly_folder": "wildfly-8.22_uat",
+    "war_folder": "IDEAL.war",
+    "oracledb": [
+      {
+        "alias": "oraclePool",
+        "user": "apacimpl",
+        "password": "apacimpl",
+        "connectString": "phildb.cwlwizkpkdcn.ap-south-1.rds.amazonaws.com:1521/orcl"
+      }
+    ],
+    "JAVA_PATH": "C://hp/java",
+    "Jboss": {
+      "jbossbindaddressmanagement": "127.0.0.1",
+      "jbossbindaddress": "127.0.0.1",
+      "jbossbindaddressunsecure": "127.0.0.1",
+      "jbossmanagementhttpport": "9991",
+      "jbossmanagementhttpsport": "9994",
+      "jbossajpport": "8010",
+      "jbosshttpport": "8081",
+      "jbosshttpsport": "8443"
+    },
+    "rest_url": "https://127.0.0.1:8443/IDEAL/",
+    "notification_server": "https://127.0.0.1:3002/",
+    "queue_details": {
+      "qhost": "127.0.0.1",
+      "quname": "credence1",
+      "qpwd": "credence1"
+    },
+    "rabbitport": "5672",
+    "rabbitqueue": "etl_report_data",
+    "rabbitexchange": "sysevents",
+    "nginx_url": "https://127.0.0.1/",
+    "applicationUrl": "https://127.0.0.1/",
+    "httpURL": "http://127.0.0.1",
+    "DATE_FORMAT": "DD/MM/YYYY",
+    "DATE_TIME_FORMAT": "DD-MM-YYYY HH:mm:ss",
+    "metabase": {
+      "METABASE_SECRET_KEY": "1c7bcc50ccc82d3d3a5a450853ac627fed85d3483e484719635bc709b351638d0",
+      "meta_USERNAME": "1c1redence",
+      "meta_PASSWORD": "1credence"
+    },
+    "APPLICATION_URL_REST": "https://127.0.0.1/IDEAL/REST/",
+    "mongosessionUrl": "mongodb://127.0.0.1:27017",
+    "userDBsessionDB": "replication",
+    "olduserDBsessionDB": "scdb",
+    "M0userDBsessionDB": "scdb",
+    "M1userDBsessionDB": "replication",
+    "NCenter_PORT": "3002",
+    "NRest_PORT": "3004",
+    "NODE_ENV": "development",
+    "ENV": "DEV",
+    "JOBPORT": "3001",
+    "c_dateformat": "DD/MM"
+  }

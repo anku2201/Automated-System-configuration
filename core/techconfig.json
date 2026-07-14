@@ -1,0 +1,638 @@
+[
+  {
+    "path": "nodeservicecenter/ideal_sc/idealnservices/dbconfig.json",
+    "extension": "json",
+    "changes": [
+      {
+        "input": "applicationUrl",
+        "output": "${config.applicationUrl}"
+      },
+      {
+        "input": "oracledb[0].alias",
+        "output": "${config.oracledb[0].alias}"
+      },
+      {
+        "input": "oracledb[0].user",
+        "output": "${config.oracledb[0].user}"
+      },
+      {
+        "input": "oracledb[0].password",
+        "output": "${config.oracledb[0].password}"
+      },
+      {
+        "input": "oracledb[0].connectString",
+        "output": "${config.oracledb[0].connectString}"
+      },
+      {
+        "input": "rabbitmq.user",
+        "output": "${config.queue_details.quname}"
+      },
+      {
+        "input": "rabbitmq.password",
+        "output": "${config.queue_details.qpwd}"
+      },
+      {
+        "input": "rabbitmq.serverip",
+        "output": "${config.queue_details.qhost}"
+      },
+      {
+        "input": "DATE_FORMAT",
+        "output": "${config.DATE_FORMAT}"
+      },
+      {
+        "input": "url",
+        "output": "${config.applicationUrl}nc/"
+      },
+      {
+        "input": "METABASE_SECRET_KEY",
+        "output": "${config.metabase.METABASE_SECRET_KEY}"
+      },
+      {
+        "input": "USERNAME",
+        "output": "${config.metabase.meta_USERNAME}"
+      },
+      {
+        "input": "PASSWORD",
+        "output": "${config.metabase.meta_PASSWORD}"
+      },
+      {
+        "input": "APPLICATION_URL",
+        "output": "${config.APPLICATION_URL_REST}"
+      }
+    ]
+  },
+  {
+    "path": "nodeservicecenter/ideal_sc/idealnservices/dbconfig.js",
+    "extension": "json",
+    "changes": [
+      {
+        "input": "sessionURL",
+        "output": "${config.mongosessionUrl}"
+      },
+      {
+        "input": "userDB.sessionDB",
+        "output": "${config.userDBsessionDB}"
+      },
+      {
+        "input": "olddb.userDB.sessionDB",
+        "output": "${config.olduserDBsessionDB}"
+      },
+      {
+        "input": "olddb.mongodb[0].sessionDB",
+        "output": "${config.M0userDBsessionDB}"
+      },
+      {
+        "input": "olddb.mongodb[1].sessionDB",
+        "output": "${config.M1userDBsessionDB}"
+      },
+      {
+        "input": "DATE_FORMAT",
+        "output": "${config.DATE_FORMAT}"
+      },
+      {
+        "input": "oracledb[0].alias",
+        "output": "${config.oracledb[0].alias}"
+      },
+      {
+        "input": "oracledb[0].user",
+        "output": "${config.oracledb[0].user}"
+      },
+      {
+        "input": "oracledb[0].password",
+        "output": "${config.oracledb[0].password}"
+      },
+      {
+        "input": "oracledb[0].connectString",
+        "output": "${config.oracledb[0].connectString}"
+      }
+    ]
+  },
+  {
+    "path": "/nodeconsumer/.env",
+    "extension": "",
+    "changes": [
+      {
+        "input": "ORA_USER",
+        "output": "ORA_USER=${config.oracledb[0].user}"
+      },
+      {
+        "input": "ORA_PASS",
+        "output": "ORA_PASS=${config.oracledb[0].password}"
+      },
+      {
+        "input": "ORA_CONNECTION",
+        "output": "ORA_CONNECTION=${config.oracledb[0].connectString}"
+      },
+      {
+        "input": "MONGO_URL",
+        "output": "MONGO_URL=${config.mongosessionUrl}"
+      },
+      {
+        "input": "RB_USER",
+        "output": "RB_USER=${config.queue_details.quname}"
+      },
+      {
+        "input": "RB_PASS",
+        "output": "RB_PASS=${config.queue_details.qpwd}"
+      },
+      {
+        "input": "NOTIFICATION_URL",
+        "output": "NOTIFICATION_URL=${config.applicationUrl}nc/dashboard"
+      }
+    ]
+  },
+  {
+    "path": "/NCenter_IDEAL/dist/server/.env",
+    "extension": "",
+    "changes": [
+      {
+        "input": "NODE_PORT",
+        "output": "NODE_PORT=${config.NCenter_PORT}"
+      },
+      {
+        "input": "NODE_ENV",
+        "output": "NODE_ENV=${config.NODE_ENV}"
+      },
+      {
+        "input": "Q_USER",
+        "output": "Q_USER=${config.queue_details.quname}"
+      },
+      {
+        "input": "Q_PASSWORD",
+        "output": "Q_PASSWORD=${config.queue_details.qpwd}"
+      },
+      {
+        "input": "Q_HOSTQ_HOST",
+        "output": "Q_HOSTQ_HOST=${config.queue_details.qhost}"
+      },
+      {
+        "input": "MONGODB",
+        "output": "MONGODB=${config.mongosessionUrl}/replication/"
+      },
+      {
+        "input": "MONGODB_URL",
+        "output": "MONGODB_URL=${config.mongosessionUrl}"
+      }
+    ]
+  },
+  {
+    "path": "JOBCENTER NODE-RED/jobcenternodered/config.json",
+    "extension": "json",
+    "changes": [
+      {
+        "input": "databases.oraclePool.user",
+        "output": "${config.oracledb[0].user}"
+      },
+      {
+        "input": "databases.oraclePool.password",
+        "output": "${config.oracledb[0].password}"
+      },
+      {
+        "input": "databases.oraclePool.connectstring",
+        "output": "${config.oracledb[0].connectString}"
+      },
+      {
+        "input": "rabbitmq.username",
+        "output": "${config.queue_details.quname}"
+      },
+      {
+        "input": "rabbitmq.password",
+        "output": "${config.queue_details.qpwd}"
+      },
+      {
+        "input": "rabbitmq.serverip",
+        "output": "${config.queue_details.qhost}"
+      },
+      {
+        "input": "rabbitmq.port",
+        "output": "${config.rabbitport}"
+      },
+      {
+        "input": "notification.url",
+        "output": "${config.applicationUrl}nc/"
+      }
+    ]
+  },
+  {
+    "path": "jobcenter/config.json",
+    "extension": "json",
+    "changes": [
+      {
+        "input": "ENV",
+        "output": "${config.ENV}"
+      },
+      {
+        "input": "PORTNO",
+        "output": "${config.JOBPORT}"
+      },
+      {
+        "input": "sessionURL",
+        "output": "${config.mongosessionUrl}"
+      },
+      {
+        "input": "sessionDB",
+        "output": "${config.olduserDBsessionDB}"
+      },
+      {
+        "input": "user",
+        "output": "${config.oracledb[0].user}"
+      },
+      {
+        "input": "password",
+        "output": "${config.oracledb[0].password}"
+      },
+      {
+        "input": "connectstring",
+        "output": "${config.oracledb[0].connectString}"
+      }
+    ]
+  },
+  {
+    "path": "/Installation/Consumers/config.json",
+    "extension": "json",
+    "changes": [
+      {
+        "input": "username",
+        "output": "${config.queue_details.quname}"
+      },
+      {
+        "input": "password",
+        "output": "${config.queue_details.qpwd}"
+      },
+      {
+        "input": "serverIp",
+        "output": "${config.queue_details.qhost}"
+      },
+      {
+        "input": "serverIp",
+        "output": "${config.queue_details.qhost}"
+      },
+      {
+        "input": "applicationUrl",
+        "output": "${config.rest_url}"
+      },
+      {
+        "input": "notificationUrl",
+        "output": "${config.applicationUrl}nc/"
+      }
+    ]
+  },
+  {
+    "path": "/Installation/Consumers_Java/consumer_core/iconfig.jds",
+    "extension": "",
+    "changes": [
+      {
+        "input": "iwebz.rest_url",
+        "output": "iwebz.rest_url=${config.rest_url}"
+      },
+      {
+        "input": "iwebz.notification_server",
+        "output": "iwebz.notification_server=${config.applicationUrl}nc/"
+      },
+      {
+        "input": "iwebz.dbuser",
+        "output": "iwebz.dbuser=${config.oracledb[0].user}"
+      },
+      {
+        "input": "iwebz.dbpass",
+        "output": "iwebz.dbpass=${config.oracledb[0].password}"
+      },
+      {
+        "input": "iwebz.dbname",
+        "output": "iwebz.dbname=${config.oracledb[0].connectString}"
+      },
+      {
+        "input": "iwebz.duser",
+        "output": "iwebz.duser=${config.oracledb[0].user}"
+      },
+      {
+        "input": "iwebz.dpass",
+        "output": "iwebz.dpass=${config.oracledb[0].password}"
+      },
+      {
+        "input": "iwebz.dname",
+        "output": "iwebz.dname=${config.oracledb[0].connectString}"
+      }
+    ]
+  },
+  {
+    "path": "/Installation/Consumers_Java/config.json",
+    "extension": "json",
+    "changes": [
+      {
+        "input": "codebase",
+        "output": "${config.sourcepath}/${config.wildfly_folder}/standalone/deployments/${config.war_folder}"
+      }
+    ]
+  },
+  {
+    "path": "/idealworkercenter/Handlers/config.json",
+    "extension": "json",
+    "changes": [
+      {
+        "input": "oracledb[0].username",
+        "output": "${config.oracledb[0].user}"
+      },
+      {
+        "input": "oracledb[0].password",
+        "output": "${config.oracledb[0].password}"
+      },
+      {
+        "input": "oracledb[0].connectString",
+        "output": "${config.oracledb[0].connectString}"
+      },
+      {
+        "input": "rabbitmq.username",
+        "output": "${config.queue_details.quname}"
+      },
+      {
+        "input": "rabbitmq.password",
+        "output": "${config.queue_details.qpwd}"
+      },
+      {
+        "input": "rabbitmq.serverip",
+        "output": "${config.queue_details.qhost}"
+      },
+      {
+        "input": "NLS_DATE_FORMAT",
+        "output": "${config.DATE_FORMAT}"
+      },
+      {
+        "input": "notification.url",
+        "output": "${config.applicationUrl}nc/"
+      },
+      {
+        "input": "mongodb1[0].connectString",
+        "output": "${config.mongosessionUrl}"
+      },
+      {
+        "input": "mongodb1[0].db",
+        "output": "${config.olduserDBsessionDB}"
+      },
+      {
+        "input": "c_dateformat",
+        "output": "${config.c_dateformat}"
+      },
+      {
+        "input": "jobcenter_url",
+        "output": "${config.httpURL}:${config.JOBPORT}/triggerevent"
+      }
+    ]
+  },
+  {
+    "path": "/idealetl/custom/config.json",
+    "extension": "json",
+    "changes": [
+      {
+        "input": "NODE_ENV",
+        "output": "${config.NODE_ENV}"
+      },
+      {
+        "input": "user",
+        "output": "${config.oracledb[0].user}"
+      },
+      {
+        "input": "password",
+        "output": "${config.oracledb[0].password}"
+      },
+      {
+        "input": "connectString",
+        "output": "${config.oracledb[0].connectString}"
+      },
+      {
+        "input": "rabbitmq.user",
+        "output": "${config.queue_details.quname}"
+      },
+      {
+        "input": "rabbitmq.password",
+        "output": "${config.queue_details.qpwd}"
+      },
+      {
+        "input": "rabbitmq.serverip",
+        "output": "${config.queue_details.qhost}"
+      },
+      {
+        "input": "rabbitmq.queue",
+        "output": "${config.rabbitqueue}"
+      },
+      {
+        "input": "rabbitmq.exchange",
+        "output": "${config.rabbitexchange}"
+      },
+      {
+        "input": "DateFormat",
+        "output": "${config.DATE_FORMAT}"
+      },
+      {
+        "input": "notification.url",
+        "output": "${config.applicationUrl}"
+      }
+    ]
+  },
+  {
+    "path": "IDEAL6_Startup/nrestserver/iwfnservices/dbconfig.json",
+    "extension": "json",
+    "changes": [
+      {
+        "input": "oracledb[0].alias",
+        "output": "${config.oracledb[0].alias}"
+      },
+      {
+        "input": "oracledb[0].user",
+        "output": "${config.oracledb[0].user}"
+      },
+      {
+        "input": "oracledb[0].password",
+        "output": "${config.oracledb[0].password}"
+      },
+      {
+        "input": "oracledb[0].connectString",
+        "output": "${config.oracledb[0].connectString}"
+      },
+      {
+        "input": "rabbitmq.user",
+        "output": "${config.queue_details.quname}"
+      },
+      {
+        "input": "rabbitmq.password",
+        "output": "${config.queue_details.qpwd}"
+      },
+      {
+        "input": "rabbitmq.serverip",
+        "output": "${config.queue_details.qhost}"
+      },
+      {
+        "input": "rabbitmq.exchange",
+        "output": "${config.rabbitexchange}"
+      },
+      {
+        "input": "DATE_FORMAT",
+        "output": "${(config.DATE_FORMAT).split('/').join('-')}"
+      },
+      {
+        "input": "PORT",
+        "output": "${config.NRest_PORT}"
+      },
+      {
+        "input": "DATE_TIME_FORMAT",
+        "output": "${config.DATE_TIME_FORMAT}"
+      },
+      {
+        "input": "METABASE_SECRET_KEY",
+        "output": "${config.metabase.METABASE_SECRET_KEY}"
+      },
+      {
+        "input": "METABASE.USERNAME",
+        "output": "${config.metabase.meta_USERNAME}"
+      },
+      {
+        "input": "METABASE.PASSWORD",
+        "output": "${config.metabase.meta_PASSWORD}"
+      },
+      {
+        "input": "UPLOAD_PATH",
+        "output": "${config.sourcepath}/nodeservicecenter/ideal_sc/upload/"
+      },
+      {
+        "input": "DOWNLOAD_PATH",
+        "output": "${config.sourcepath}/nodeservicecenter/ideal_sc/download/"
+      }
+    ]
+  },
+  {
+    "path": "/${config.wildfly_folder}/standalone/configuration/standalone.xml",
+    "extension": "",
+    "changes": [
+      {
+        "input": "<connection-url>",
+        "output": "<connection-url>jdbc:oracle:thin:@${config.oracledb[0].connectString}</connection-url>"
+      },
+      {
+        "input": "<user-name>",
+        "output": "<user-name>${config.oracledb[0].user}</user-name>"
+      },
+      {
+        "input": "<password>",
+        "output": "<password>${config.oracledb[0].password}</password>"
+      },
+      {
+        "input": "<inet-address value=\"${jboss.bind.address.management:",
+        "output": "<inet-address value=\"#&#jboss.bind.address.management:${config.Jboss.jbossbindaddressmanagement}}\"/>"
+      },
+      {
+        "input": "<inet-address value=\"${jboss.bind.address:",
+        "output": "<inet-address value=\"#&#jjboss.bind.address:${config.Jboss.jbossbindaddress}}\"/>"
+      },
+      {
+        "input": "<inet-address value=\"${jboss.bind.address.unsecure:",
+        "output": "<inet-address value=\"#&#jjboss.bind.address.unsecure:${config.Jboss.jbossbindaddressunsecure}}\"/>"
+      },
+      {
+        "input": "<wsdl-host>",
+        "output": "<wsdl-host>#&#jboss.bind.address:${config.Jboss.jbossbindaddress}}</wsdl-host>"
+      },
+      {
+        "input": "jboss.management.http.port",
+        "output": "<socket-binding name=\"management-http\" interface=\"management\" port=\"#&#jboss.management.http.port:${config.Jboss.jbossmanagementhttpport}}\"/>"
+      },
+      {
+        "input": "jboss.management.https.port",
+        "output": "<socket-binding name=\"management-https\" interface=\"management\" port=\"#&#jboss.management.https.port:${config.Jboss.jbossmanagementhttpsport}}\"/>"
+      },
+      {
+        "input": "jboss.ajp.port",
+        "output": "<socket-binding name=\"ajp\" port=\"#&#jboss.ajp.port:${config.Jboss.jbossajpport}}\"/>"
+      },
+      {
+        "input": "jboss.http.port",
+        "output": "<socket-binding name=\"http\" port=\"#&#jboss.http.port:${config.Jboss.jbosshttpport}}\"/>"
+      },
+      {
+        "input": "jboss.https.port",
+        "output": "<socket-binding name=\"https\" port=\"#&#jboss.https.port:${config.Jboss.jbosshttpsport}}\"/>"
+      }
+    ]
+  },
+  {
+    "path": "${config.wildfly_folder}/standalone/deployments/${config.war_folder}/REST/Framework/lib/iconfig.jds",
+    "extension": "",
+    "changes": [
+        {
+          "input": "rest_url",
+          "output": "iwebz.rest_url =\"${config.rest_url}\""
+        },
+        {
+          "input": "notification_server",
+          "output": "iwebz.notification_server =\"${config.notification_server}\""
+        },
+        {
+          "input": "queue_details",
+          "output": "iwebz.queue_details=\"${config.queue_details}\""
+        },
+        {
+          "input": "nginx_url",
+          "output": "iwebz.nginx_url =\"${config.nginx_url}\""
+        }
+    ]
+  },
+  {
+    "path": "${config.wildfly_folder}/standalone/deployments/${config.war_folder}/WEB-INF/web.xml",
+    "extension": "",
+    "changes": [
+      {
+        "input": "<param-value>D",
+        "output": "<param-value>${path.join(sourcepath,config.wildfly_folder,\"/standalone/deployments/\",config.war_folder)}</param-value>"
+      }
+    ]
+  },
+  {
+    "path": "watchdog/automatedUploads/.env",
+    "extension": "",
+    "changes": [
+        {
+          "input": "INBOX_PATH",
+          "output": "INBOX_PATH=${config.sourcepath}/Upload Files/Inbox/ccil_cblo_transactions,${config.sourcepath}/Upload Files/Inbox/croms_transactions,${config.sourcepath}/Upload Files/Inbox/nds_call_transactions,${config.sourcepath}/Upload Files/Inbox/nds_om_reported_transactions,${config.sourcepath}/Upload Files/Inbox/trep_transactions,${config.sourcepath}/Upload Files/Inbox/nds_om_transactions,${config.sourcepath}/Upload Files/Inbox/Annualised Risk Free Yield,${config.sourcepath}/Upload Files/Inbox/Annualised_Fimmda SpreadSheet for Banks,${config.sourcepath}/Upload Files/Inbox/FIMMDA Prices GS,${config.sourcepath}/Upload Files/Inbox/FIMMDA Prices SG,${config.sourcepath}/Upload Files/Inbox/FIMMDA Prices OTHS,${config.sourcepath}/Upload Files/Inbox/Annualised Fimmda SpreadSheet for Corporates,${config.sourcepath}/Upload Files/Inbox/Annualised Fimmda SpreadSheet for NBFC,${config.sourcepath}/Upload Files/Inbox/Annualised Fimmda SpreadSheet for PSUs FIs,${config.sourcepath}/Upload Files/Inbox/Semi-Annualised Risk Free Yield,${config.sourcepath}/Upload Files/Inbox/Zero Coupon Annualised Fimmda SpreadSheet for Corporates,${config.sourcepath}/Upload Files/Inbox/Zero Coupon Annualised Fimmda SpreadSheet for NBFCs,${config.sourcepath}/Upload Files/Inbox/Zero Coupon Annualised Fimmda SpreadSheet for PSUs FIs and Banks,${config.sourcepath}/Upload Files/Inbox/BSE Bhav Copy,${config.sourcepath}/Upload Files/Inbox/NSE Bhav Copy,${config.sourcepath}/Upload Files/Inbox/Broker Order IFN515,${config.sourcepath}/Upload Files/Inbox/Custodian File,${config.sourcepath}/Upload Files/Inbox/Physical Holdings File,${config.sourcepath}/Upload Files/Inbox/Reuters,${config.sourcepath}/Upload Files/Inbox/cogencis_prices,${config.sourcepath}/Upload Files/Inbox/Barclays,${config.sourcepath}/Upload Files/Inbox/Merchant Deal Upload,${config.sourcepath}/Upload Files/Inbox/FXClear,${config.sourcepath}/Upload Files/Inbox/AMFI Upload,${config.sourcepath}/Upload Files/Inbox/FISPRICES Upload,${config.sourcepath}/Upload Files/Inbox/CBRICS,${config.sourcepath}/Upload Files/Inbox/FTRAC Issuance,${config.sourcepath}/Upload Files/Inbox/FTRAC Secondary"
+        },
+        {
+          "input": "OUTBOX_PATH",
+          "output": "OUTBOX_PATH=${config.sourcepath}/Upload Files/Outbox/ccil_cblo_transactions,${config.sourcepath}/Upload Files/Outbox/croms_transactions,${config.sourcepath}/Upload Files/Outbox/nds_call_transactions,${config.sourcepath}/Upload Files/Outbox/nds_om_reported_transactions,${config.sourcepath}/Upload Files/Outbox/trep_transactions,${config.sourcepath}/Upload Files/Outbox/nds_om_transactions,${config.sourcepath}/Upload Files/Outbox/Annualised Risk Free Yield,${config.sourcepath}/Upload Files/Outbox/Annualised Fimmda SpreadSheet for Banks,${config.sourcepath}/Upload Files/Outbox/FIMMDA Prices GS,${config.sourcepath}/Upload Files/Outbox/FIMMDA Prices SG,${config.sourcepath}/Upload Files/Outbox/FIMMDA Prices OTHS,${config.sourcepath}/Upload Files/Outbox/Annualised Fimmda SpreadSheet for Corporates,${config.sourcepath}/Upload Files/Outbox/Annualised Fimmda SpreadSheet for NBFC,${config.sourcepath}/Upload Files/Outbox/Annualised Fimmda SpreadSheet for PSUs FIs,${config.sourcepath}/Upload Files/Outbox/Semi-Annualised Risk Free Yield,${config.sourcepath}/Upload Files/Outbox/Zero Coupon Annualised Fimmda SpreadSheet for Corporates,${config.sourcepath}/Upload Files/Outbox/Zero Coupon Annualised Fimmda SpreadSheet for NBFCs,${config.sourcepath}/Upload Files/Outbox/Zero Coupon Annualised Fimmda SpreadSheet for PSUs FIs and Banks,${config.sourcepath}/Upload Files/Outbox/BSE Bhav Copy,${config.sourcepath}/Upload Files/Outbox/NSE Bhav Copy,${config.sourcepath}/Upload Files/Outbox/Broker Order IFN515,${config.sourcepath}/Upload Files/Outbox/Custodian File,${config.sourcepath}/Upload Files/Outbox/Physical Holdings File,${config.sourcepath}/Upload Files/Outbox/Reuters,${config.sourcepath}/Upload Files/Outbox/cogencis_prices,${config.sourcepath}/Upload Files/Outbox/Barclays,${config.sourcepath}/Upload Files/Outbox/Merchant Deal Upload,${config.sourcepath}/Upload Files/Outbox/FXClear,${config.sourcepath}/Upload Files/Outbox/AMFI Upload,${config.sourcepath}/Upload Files/Outbox/FISPRICES Upload,${config.sourcepath}/Upload Files/Outbox/CBRICS,${config.sourcepath}/Upload Files/Outbox/FTRAC Issuance,${config.sourcepath}/Upload Files/Outbox/FTRAC Secondary"
+        },
+        {
+          "input": "ERRORBOX_PATH",
+          "output": "ERRORBOX_PATH=${config.sourcepath}/Upload Files/Errorbox/ccil_cblo_transactions,${config.sourcepath}/Upload Files/Errorbox/croms_transactions,${config.sourcepath}/Upload Files/Errorbox/nds_call_transactions,${config.sourcepath}/Upload Files/Errorbox/nds_om_reported_transactions,${config.sourcepath}/Upload Files/Errorbox/trep_transactions,${config.sourcepath}/Upload Files/Errorbox/nds_om_transactions,${config.sourcepath}/Upload Files/Errorbox/Annualised Risk Free Yield,${config.sourcepath}/Upload Files/Errorbox/Annualised Fimmda SpreadSheet for Banks,${config.sourcepath}/Upload Files/Errorbox/FIMMDA Prices GS,${config.sourcepath}/Upload Files/Errorbox/FIMMDA Prices SG,${config.sourcepath}/Upload Files/Errorbox/FIMMDA Prices OTHS,${config.sourcepath}/Upload Files/Errorbox/Annualised Fimmda SpreadSheet for Corporates,${config.sourcepath}/Upload Files/Errorbox/Annualised Fimmda SpreadSheet for NBFC,${config.sourcepath}/Upload Files/Errorbox/Annualised Fimmda SpreadSheet for PSUs FIs,${config.sourcepath}/Upload Files/Errorbox/Semi-Annualised Risk Free Yield,${config.sourcepath}/Upload Files/Errorbox/Zero Coupon Annualised Fimmda SpreadSheet for Corporates,${config.sourcepath}/Upload Files/Errorbox/Zero Coupon Annualised Fimmda SpreadSheet for NBFCs,${config.sourcepath}/Upload Files/Errorbox/Zero Coupon Annualised Fimmda SpreadSheet for PSUs FIs and Banks,${config.sourcepath}/Upload Files/Errorbox/BSE Bhav Copy,${config.sourcepath}/Upload Files/Errorbox/NSE Bhav Copy,${config.sourcepath}/Upload Files/Errorbox/Broker Order IFN515,${config.sourcepath}/Upload Files/Errorbox/Custodian File,${config.sourcepath}/Upload Files/Errorbox/Physical Holdings File,${config.sourcepath}/Upload Files/Errorbox/Reuters,${config.sourcepath}/Upload Files/Errorbox/cogencis_prices,${config.sourcepath}/Upload Files/Errorbox/Barclays,${config.sourcepath}/Upload Files/Errorbox/Merchant Deal Upload,${config.sourcepath}/Upload Files/Errorbox/FXClear,${config.sourcepath}/Upload Files/Errorbox/AMFI Upload,${config.sourcepath}/Upload Files/Errorbox/FISPRICES Upload,${config.sourcepath}/Upload Files/Errorbox/CBRICS,${config.sourcepath}/Upload Files/Errorbox/FTRAC Issuance,${config.sourcepath}/Upload Files/Errorbox/FTRAC Secondary"
+        },
+        {
+          "input": "FILEID",
+          "output": "FILEID=MF14,MF16,MF15,MF17,MF50,MF13,MF1,MF2,MF3,MF4,MF5,MF6,MF7,MF8,MF9,MF10,MF11,MF12,MF18,MF19,MF20,MF21,MF22,MF46,MF25,MF55,MF56,MF57,MF26,MF66,MF73,MF71,MF72"
+        },
+        {
+          "input": "UPLOADSERVER_PATH",
+          "output": "UPLOADSERVER_PATH=${config.sourcepath}/Upload Files/Systembox/"
+        },
+        {
+          "input": "HOME_PATH",
+          "output": "HOME_PATH=${config.sourcepath}/Upload Files/Systembox/"
+        },
+        {
+          "input": "REST_URL",
+          "output": "REST_URL=http://${config.Jboss.jbossbindaddress+\":\"+config.Jboss.jbosshttpport}/${config.war_folder.split('.')[1]}/REST/upload/process"
+        },
+        {
+          "input": "TICKET",
+          "output": "TICKET=460295015613825869397689505392"
+        },
+        {
+          "input": "RELOAD",
+          "output": "RELOAD=false"
+        },
+        {
+          "input": "NOTIFICATION_URL",
+          "output": "NOTIFICATION_URL=${config.nginx_url}nc/user/msg/operationdashboard/create"
+        },
+        {
+          "input": "RABBITMQ_CONFIG",
+          "output": "RABBITMQ_CONFIG={\"username\": \"${config.queue_details.quname}\",\"type\": \"amqp\",\"password\": \"${config.queue_details.qpwd}\",\"serverip\": \"${config.queue_details.qhost}\",\"port\": \"${config.rabbitport}\"}"
+        }
+    ]
+  }
+]

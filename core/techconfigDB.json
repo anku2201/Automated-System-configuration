@@ -1,0 +1,40 @@
+{
+    "update": [
+        {
+        "table": "iwz_parameter",
+        "set": {
+          "paramvalue": "${config.queue_details.quname}"
+        },
+        "where": "paramname = 'mq_username'"
+      },
+      {
+        "table": "iwz_parameter",
+        "set": {
+          "paramvalue": "${config.queue_details.qhost}"
+        },
+        "where": "paramname = 'mq_ip'"
+      },
+      {
+        "table": "iwz_parameter",
+        "set": {
+          "paramvalue": "${config.queue_details.qpwd}"
+        },
+        "where": "paramname = 'mq_password'"
+      },
+      {
+        "table": "iwz_parameter",
+        "set": {
+          "paramvalue": "${config.rabbitport}"
+        },
+        "where": "paramname = 'mq_port'"
+      },
+      {
+        "table": "iwz_parameter",
+        "set": {
+          "paramvalue": "${config.sourcepath}/Upload Files"
+        },
+        "where": "paramname = 'MULTIPLE_FILEUPLOAD_PATH'"
+      }
+    ]
+  }
+  
